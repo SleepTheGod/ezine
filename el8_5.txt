@@ -1,0 +1,2771 @@
+#!/bin/sh
+################################################
+##::::::::::::::::::::::::::::::::::::::::::::##
+##:'####::::::'########:'##::::::::'#######:::##
+##'##  ##:'##: ##.....:: ##:::::::'##.... ##::##
+##..::. ####:: ##::::::: ##::::::: ##:::: ##::##
+##:::::....::: ######::: ##:::::::: #######:::##
+##:::::::::::: ##...:::: ##:::::::'##.... ##::##
+##:::::::::::: ##::::::: ##::::::: ##:::: ##::##
+##:~el8[RH]:: ########: ########:. #######::::##
+##::::::::::::........::........:::.......::::##
+################################################
+## the definitive src for the RedHat H/P Scene##
+################################################
+## do "sh <ISSUE_NAME>" to extract eldump.c   ##
+## compile eldump.c and use it to extract     ##
+## the rest of the w4r3z:                     ##
+## $ ./eldump el8.rh.txt -vvv                 ##
+##                                            ##
+## mirrors:                                   ##
+##  <*> developer.redhat.com/~el8             ##
+##  <*> access.redhat.com/~el8                ##
+##  <*> ftp.redhat.com/pub/el8                ##
+##  <*> www.redhat.com/wdocs/el8              ##
+##  <*> bugzilla.redhat.com/~el8              ##
+################################################
+## where have all the 0dayz g0neeeeeeeeeeeee! ##
+################################################
+################################################
+## By SleepTheGod | ClumsyLulz | el8 Tr1ck573r##
+################################################
+cat <<'-+-+'> /dev/null
+[BOI]
+.----------------------------------------------------------------.
+; t4ble of h0ly w4r3z & bey0nd ;                                 ;
+`------------------------------'                                 ;
+; *00* ~v~ intr0duktion                                          ;
+; *01* ~v~ food 4 th0t: redhat sells out                         ;
+; *02* ~v~ know your redhat enemy                                ;
+; *03* ~v~ the rhel 10 source lockdown                           ;
+; *04* ~v~ IBM buys the beard                                    ;
+; *05* ~v~ a brief history of redhat.com                         ;
+; *06* ~v~ fedora vs rhel: the tale of two hats                  ;
+; *07* ~v~ cve-2026-nothing: a fake advisory we wrote            ;
+; *08* ~v~ the 570GB supply chain lesson                         ;
+; *09* ~v~ redhat subscription modelfucked                       ;
+; *10* ~v~ proof section                                         ;
+; *11* ~v~ closing werdz                                         ;
+; *12* ~v~ ELDUMP & ELTAG ~el8 ez1ne t00lz                       ;
+`----------------------------------------------------------------'
+
+
+.----------------------------------------------------------------.
+; t4ble of ~el8 m3mbrZ ;                                         ;
+`----------------------'                                         ;
+; SiLLY G00S3         -> the high preezt                         ;
+; FuNNY BuNNY         -> a blip on your gaydar                   ;
+; ODaY MaZTeR         -> getz all the HoEZ and CoDEz             ;
+; ENRiCO              -> insane in the MeMBRAiN                  ;
+; ReDPUBeZ            -> aka KARRoT_BoTToM                       ;
+; CaWCaW              -> eye'll te4r YoUR EyEZ OuT               ;
+; KRaD                -> so FReSH & so CLEaN                     ;
+; CLiFF SToLE         -> CLiFF SToLE YOUR NoTEZ                  ;
+; PoonTar             -> CRaZY CooL FRe$h                        ;
+`----------------------------------------------------------------'
+
+
+.~v~----------------------------------------------------------~v~.
+; *00* intr0duktion -- ~el8 TEaM                                 ;
+`----------------------------------------------------------------'
+
+        w3lcome back friendz & fo'z a new issue of ~el8 h4z juzt
+        arrose. this time we're t4lking about the house that Linux
+        built and the company that bought it. redhat.com. the beard.
+        the blue. the billion-dollar sellout.
+
+        ok w3rd. a new ~el8 for u2 re4d. this one iz about the most
+        recognizable Linux company on the planet, and how it went from
+        "open source beacon" to "IBM subsidiary with a subscription
+        paywall." we're not here to be nice. we're here to be ~el8.
+
+        we r h4rdkore h4krz who clean your toilets, the h4rdkore k0derz
+        who forcefully w1pe y0ur wind0wz @ st0pl1ghtz and intersekti0nz,
+        the h4rdk0re phre4krZ who mow your l4wn, the h4rdk0re cr4krz
+        who ste4l cl0thez from the salvati0n army, we take yor orderz
+        at burger k1ng, we steal yor hubk4pz, we even put k4meraz in
+        port `o pottiez. *_DO_* *_NOT_* *_FUCK_* *_WITH_* *_US_*.
+
+        -- ~el8 team
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *01* food 4 th0t: redhat sells out -- ~el8 TeaM               ;
+`----------------------------------------------------------------'
+
+[kdu0dz]                          -> IBM
+ [*]->  every executive at Red Hat who signed off on the
+    ->  "complete corresponding source" lockdown, the AI
+    ->  pivot, and the China R&D purge. you know who you are.
+    ->  also: anyone who still thinks "open source" means what
+    ->  it meant in 1999.
+
+[note-to-reader]                  -> read the whole fucking thing
+
+[ldu0dz]                          -> every1 except [kdu0dz]
+ [*]->  including the new crop of "Red Hat is still open
+    ->  source!" defenders who haven't read the CCS clause.
+
+....................................................................
+~el8 jih4d - the h0ly w4r3z w4r - ~el8 jih4d - the h0ly w4r3z w4r -:
+...................................................................'
+[m1ssi0nz]                        -> document the fall
+ [*]->  archive the source lockdown, the layoffs, the AI pivot,
+    ->  the downstream squeeze, and the subscription lock-in.
+    ->  make sure the next generation knows what happened.
+    ->  ------------f0r-th3-r3c0rd------------
+
+[r1d-of-th1z-l4mer]               -> the "Red Hat is a charity" myth
+...................................................................,
+~el8 jih4d - the h0ly w4r3z w4r - ~el8 jih4d - the h0ly w4r3z w4r -:
+....................................................................
+
+[b-sure-2-chek-out]               -> the proof section in article 10
+
+[also-b-sure-2-chek-out]          -> TRON ROLLING, the HackPlayer film
+ [*]->  HackPlayer (TM) is fucking elite..
+
+[kku0lway2navigatethiz-ezineinvi] -> /\~v\~
+
+[lamezt-mailing-list-ever]        -> rhelv9-list
+
+[lamezt-lamer-of-the-ye4r]        -> whoever wrote the CCS clause
+
+[lame-as-hell]                    -> the 2026 RHEL 10.2 "intelligent
+                                    evolution" press release
+
+[lamezt-sekurity-dork-oftheye4r]  -> the Red Hat security team member
+                                    who said "it's not a supply chain
+                                    attack, it's a feature"
+
+[lamezt-channel-of-the-year]      -> #rhel on libera
+
+[lamezt-koder-of-the-ye4r]        -> whoever maintains the RHEL
+                                    subscription portal
+
+[lamezt-boyband-of-the-ye4r]      -> the IBM board of directors
+
+[lamezt-rapper-of-the-ye4r]       -> Ja Rule (still)
+
+[lamezt-chiqbitch-of-the-ye4r]    -> the RHEL 10.2 marketing dept
+
+[bezt-support1ng-aktr]            -> the Fedora community (they tried)
+
+[worzt-nickname-to-pic]           -> "Big Blue"
+
+[good-advice]                     -> alw4yz keep dkk auto g3t on,
+ [*]->  y0u nevr kn0w when someone w1ll confuse you w1th
+ [*]->  som1 else and s3nd u lo4dz 0f fre$h w4r3z..
+
+[lamezt-ircnetwork-of-the-ye4r]   -> irc.libera.chat #rhel
+
+[lamezt-country-in-the-world]     -> united states (sorry)
+
+[lamezt-code-of-the-ye4r]         -> the RHEL subscription entitlement
+                                    daemon (it phones home)
+
+[biggezt-one-hit-wonder]          -> Red Hat Linux 9 (2003)
+
+[only-midget-at-hacker-cons]      -> route (still)
+
+[dumb-lamerz-listed-inthisezine]  -> the IBM marketing team
+
+[coolest-irc-network-game]        -> russian roulette
+
+[lamezt-site-of-the-ye4r]         -> access.redhat.com
+
+[2nd-lamezt-site-of-the-ye4r]     -> developer.redhat.com
+
+[3rd-lamezt-site-of-the-ye4r]     -> redhat.com/en/technologies/linux-platforms
+
+[lamezt-article-of-lame-phrack58] -> "The Cathedral and the Bazaar" (1997)
+
+[best-narq-award]                 -> the Red Hat legal team
+
+[official-porn-site]              -> www.al4a.com/links
+
+     We would like to sincerely thank all of you (0) idiots who voted.
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *02* know your redhat enemy -- odaymaztr                       ;
+`----------------------------------------------------------------'
+
+Know Your RedHat Enemy - odaymaztr
+-----------------------------------
+
+many of you have heard of this great new project called "Red Hat
+Enterprise Linux", aimed at getting a firsthand look at the enterprise
+Linux market and to share the support contracts learned. at first
+glance, you blackhats may think "oh n0!@# im screwed !@# these redhat
+people with their 'certified' binaries are getting so so tricky!@#".
+at first it may have seemed a little threatening, but after looking over
+their whitepapers, apprehension quickly turned to laughter.
+
+the 2026 reality is a company that:
+  - Stopped publishing complete corresponding source (CCS) for RHEL,
+    effectively closing the door on exact rebuilds.
+  - Watched as IBM gutted the China R&D team—419 engineers shown the
+    door, work "rebalanced" to APAC hubs.
+  - Pivoted hard into AI, while Fedora developers openly fight over
+    whether "open source userspace for AI is bad."
+  - Sold itself to IBM for $34 billion in 2019 and never looked back.
+
+$ id
+uid=100(rh) gid=100(users) groups=100(users)
+$ pwd
+/export/home/rh
+$ ls -al
+drwxr-x--x   16 rh       users        4096 .
+drwxr-xr-x    8 root     root         4096 ..
+drwx------    3 rh       users        4096 .subscription
+-rw-r--r--    1 rh       users           0 .entitlement
+-rw-------    1 rh       users        2285 .ccs_lockdown
+-rw-r--r--    1 rh       users        1289 .rhel10.2_release_notes
+-rw-------    1 rh       users        5194 .ibm_playbook
+-rw-r--r--    1 rh       users          82 .open_source_beacon
+drwx------    2 rh       users        4096 .downstream
+-rw-r--r--    1 rh       users          34 .china_rd
+-rw-r--r--    1 rh       users         114 .ai_pivot
+drwxr-xr-x    2 rh       users        4096 .fedora_friction
+-rw-------    1 rh       users       14498 .consulting_breach
+lrwxrwxrwx    1 rh       users           7 .profile -> .ibm_playbook
+-rw-r--r--    1 rh       users           5 .qmail-default
+drwx------    2 rh       users        4096 .screen
+-rw-r--r--    1 rh       users        3394 .subscription_model
+drwx------    2 rh       users        4096 .ssh
+drwxr-xr-x    3 rh       users        4096 .ssh2
+-rw-r--r--    1 rh       users      257118 02-03-06_RHEL10.2.pdf
+-rw-r--r--    1 rh       users      211975 194_CCS_clause.ZIP
+-rw-r--r--    1 rh       users     3281174 194_CCS_clause.doc
+-rw-r--r--    1 rh       users       71145 ibm_playbook.tgz
+drwxr-xr-x   10 rh       users        4096 ibm_playbook1
+-rw-r--r--    1 rh       users       12091 ccs_legal.tgz.pgp
+-rw-r--r--    1 rh       users        3830 downstream_squeeze.tar.gz
+-rw-r--r--    1 rh       users        7782 ai_pivot_instructions.zip
+-rw-r--r--    1 rh       users        1827 fedora_friction.asc
+drwxr-xr-x    2 rh       users        4096 bin
+-rw-r--r--    1 rh       users       32840 ibm_balance_sheet.c
+-rw-r--r--    1 rh       users        9810 ccs_lockdown.c
+-rw-r--r--    1 rh       users        1384 ibm.key
+-rw-------    1 rh       users         264 dead.letter
+drwxr-xr-x    6 rh       users        4096 dl
+-rw-r--r--    1 rh       users       69408 subscription_model.tgz
+drwxr-x---    3 rh       users        4096 subscription
+-rw-r--r--    1 rh       users       27150 access_redhat.tgz
+-rw-r--r--    1 rh       users        4833 exploit.html
+-rw-r--r--    1 rh       users        3008 ibm_pubkey.asc
+drwxr-xr-x    2 rh       users        4096 ida
+-rw-r--r--    1 rh       users        4535 ihack.c
+-rw-r--r--    1 rh       users        7710 china_rd_purge.tar.gz
+-rw-r--r--    1 rh       users       47765 irc.txt
+-rw-r--r--    1 rh       users        2268 job
+-rw-r--r--    1 rh       root       188416 list.mdb
+drwx------    2 rh       users        4096 mail
+-rw-------    1 rh       users    35331378 mbox
+-rw-r--r--    1 rh       users         912 msg
+-rw-r--r--    1 rh       users        1642 msg.asc
+-rw-r--r--    1 rh       users        3008 new-pub.asc
+-rw-r--r--    1 rh       users        1720 noir
+-rw-r--r--    1 rh       users        1634 pubkey.pgp
+-rw-r--r--    1 rh       users        3824 solar-atach
+-rw-r--r--    1 rh       users        2064 solar-msg
+-rw-r--r--    1 rh       users          12 solar-msg.asc
+-rw-r--r--    1 rh       users         177 suid
+-rw-r--r--    1 rh       users          43 super
+drwxr-xr-x    3 rh       users        4096 tmp
+-rw-r--r--    1 rh       users       19668 ttdb.c
+
+after exploring all his shells (zolo rulez dewD!!#), the ~el8
+investigative unit decided to search his email for clues...
+(J4n3 and D1ck used in some cases to protect the innocent!)
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: Lance Spitzner <lance@honeynet.org>
+To: RH <rh@redhat.com>
+Subject: Re: dtspcd exploit obtained (fwd)
+
+Your buddy interested in chatting with the MITRE folks?
+Alot of people are very impresses with his exploit :)
+
+--
+Lance Spitzner
+http://project.honeynet.org
+
+---------- Forwarded message ----------
+From: J4ne <J4ne@mitre.org>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspcd exploit obtained
+
+I went to the apparent authors website.  It hardly mentions an interest in secur
+ity,
+but it does look like he used to teach at the University of Central Michigan
+http://jdrake.qoop.org/art/ has some pictures of him.  Are you familiar with thi
+s
+person at all?
+
+I'm wondering if he didn't write this code to teach someone else and then that p
+erson
+started distributing it.  This guy looks like he knows his stuff and not strippi
+ng the
+symbols doesn't seem to fit with that.
+
+J4n3
+
+Lance Spitzner wrote:
+
+> J4n3 wrote:
+>
+> > It was very nice of the author to include his name and email :).  I was look
+ing
+> > at the strings output and it looks like the author took a lot of time to do 
+error
+> > checking and write one of the better usage statements i've seen.  I also did
+n't
+> > notice a single misspelling and no script kiddish text at first glance.  To 
+me
+> > that says a few things about the author.  Is this typical of what you see in
+> > exploit code?  Most of the stuff i've seen in public postings is nowhere nea
+r
+> > this clean.
+>
+> Its extremely well written, and powerful.  Definitely not our
+> typical exploit :)
+>
+> lance
+
+
+note: mitre has elite modified strings binary to see if author has done proper
+error checking (very kewl!!!)
+note: use strip on binarys to confuze forensic analysis!!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: Lance Spitzner <lance@honeynet.org>
+To: RH <rh@redhat.com>
+Subject: Re: dtspcd exploit obtained (fwd)
+
+RH wrote:
+
+> I'll ask him
+
+Dude, this is not a big deal.  Just a lot of
+people interested in his exploit code, its more
+impressive then most.  NSA and FBI even asked
+me for a copy.  :)
+
+lance
+
+
+note: kn0ck kn0ck eff-bee-eye stiq em up script kid!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: Lance Spitzner <lance@honeynet.org>
+To: D1ck Song <D1ck@monkey.org>, "'D1ck Ruiu'" <dr@kyx.net>,
+        RH <rh@redhat.com>, J4ne Roesch <J4ne@sourcefire.com>
+Subject: For Project, OBSD on Sun or Intel?
+
+Gents,
+
+Seeing as how you are respected OpenBSD guru's, AND
+members of the Project, wanted to throw this question
+at you.
+
+Looks like we might get an OC12 and hardware donated
+to the Project, specifically for our internal and external
+webserver and project Infrastructure.  We will be standardizing
+on OpenBSD.
+
+Since we have our choice of software, is there any security
+value add installing OpenBSD on Sparc, or is Intel fine?
+My line of thinking is the non-Intel architecture would help
+defeat some exploit code.  Or am I just wasting time and
+making life harder with OpenBSD on Sparc?
+
+Thanks!
+
+--
+Lance Spitzner
+http://project.honeynet.org
+
+
+note: yeah ur wastin ur time bro, we'd own u even if u installed netbsd on ur xbox.
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: "D1ck H. Rowland" <D1ck@psionic.com>
+To: "J4ne Hines" <J4ne@pitt.edu>, <honeypots@securityfocus.com>
+Subject: RE: DTSPCD Exploit
+
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: SHA1
+>=20
+> Hey all, I've had several Solaris honeypots compromised where 2 files
+> (kcsun and antisun) binaries were uploaded, used and than deleted.
+> Does anyone by any chance (Lance?) know if these are the filenames
+> for the highly searched for DTSPCD exploit? If not, has anyone whose
+> honeypots been compromised seen these files downloaded to their box
+> for use before?
+>=20
+> Can't pull up anything on these filenames at Google. Please advise.
+
+On a similar note, has anyone tried putting append-only flags on the =
+target directories to keep the people from removing these files? I'm =
+looking for anyone with experience in using append-only *directories* on =
+honeypots (not just append-only logs). There does not appear to be any =
+references talking about using this technique from what I've seen.
+
+Yeah I already know the arguments: "Immutable flags can be bypassed by a =
+knowledgeable attacker..." I suppose the real question is how many =
+people are going to stick around once they found out they're effectively =
+hacking a system with a WORM drive (I suspect not many). Additionally, I =
+would like to tie a measure like this to some type of system timer =
+(external or otherwise) that will shut down the connection after X =
+minutes have elapsed of intruder activity. This could help catch them in =
+midway through the panicking process and could lead to some interesting =
+results.=20
+
+Thanks,
+
+-- D1ck
+
+
+note: i thought rm'd binarys were not a problem for u forensic experts!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: D1ck Eckholt <D1ck@crank.de>
+Subject: Re: ADMmutate
+
+Hey, I am not @ honme for another week, but if you want too look into it I
+supply a paper and some demonstration exploits and vulnerabilities in
+http://www.redhat.com/c/ADMmutate-0.8.4.tar.gz  I do my testing against snort
+or RealSecure works good :)
+
+Later,
+RH
+
+D1ck Eckholt wrote:
+
+> hello to canada ;-)
+>
+> first at all, sorry for my bad english, but i'll try my very best.
+> i am a german student and i want to make an short presentation
+> about your "ADMmutate" tool. i need a little support for doing
+> that and so i hope, you can help me:
+>
+> 1.) which software (network IDS) is the best for a simple test ?
+>       my unix/linux skills are not the best, so i would prefer a IDS
+>       (maybe an older one) for windows NT.
+> 2.) do you have or know a sourcecode of a simple buffer-overflow
+>       exploit, which can be used with your tool in a presentation ?
+> 3.) do you know good links where a can go deeper into this topic ?
+>
+> so i hope, you have time to help me with my stupid questions, but
+> i am very interested in this work and i am standing just at the beginning...
+>
+> thanks and greetings from germany
+>
+> D1ck eckholt
+>
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: J4ne Oon <J4ne@bee-net.com>
+cc: 'D1ck Ruiu' <D1ck@kyx.net>
+Subject: Re: Security Consulting Opportunity
+
+James:  Lance had copied Dragos and myself on this message.  We are based
+in Vancouver, BC Canada and have quite a bit of experience doing network
+penetration assessments.  Dragos has over a decade in the network security
+field and has been closely tied with the IDS community for some time as
+well.  We are both currently members of the Honeynet Project and have
+developed our skills over a long period of detailed technical study and
+review.  As both of us are out of town until December 10 working on other
+client engagements, could you give us a bit more detailed explanation of
+the size and scope of the assessments and reviews you would like
+conducted.  Information as too weather or not you would need a local
+presence and the estimated duration of this project.
+Thank you.
+RH
+
+Lance Spitzner wrote:
+
+> James Oon wrote:
+>
+> James, I'm afraid I'm unable to commit to this, however I
+> have copied to experts in this field, they may be able to
+> help you out.
+>
+> Thanks!
+>
+> > G'day Lance,
+> >
+> >     My name is James Oon, and I was with Sun Microsystems Professional
+> > Services
+> >     based in Singapore from 1995 to 2000. I have left since for a
+> > consulting company
+> >     called BEENET.
+> >
+> >     Anyway, the purpose of the email is to to enquire regarding your
+> > interest to do a
+> >     security audit for stock exchange. The job is to perform a
+> > penetration test and
+> >     security review. Problem is that some of the machine is on S/390
+> > (especially the
+> >     backend). We are willing to pay a handsome sum for the job.
+> >
+> >     Please email me back if you are interested or if you know someone
+> > else who is
+> >     interested.
+> >
+> >     Many thanks.
+> >
+> > Regards
+> > James Oon
+> >
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To:  D1ck f4ce <silvio@qualys.com>
+Subject: Re: virus (err.. cansecwest)
+
+Elite!!! I spoke with dragos and he thinks it'd be an awesome addtion too
+the conf.  Sure man, just prep a powerpoint show for the conf or something
+or however you wanna give a talk.  Give dragos a showt (dr@kyx.net) or msg
+him on IRC, i finally got his ass to show up pretty consistantly in
+#!w00w00 (usually nik dr or something)  I think he's mesg'ng you now but I
+think it's late over there...  Let me know how it all goes, I thnk it'd be
+fun to finally get together ;)
+
+
+We'll be partieng hardcorein Vancouver man :)
+RH
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Catherine Nolan <catherine@syngress.com>
+Subject: Re: Hack Proofing Your Network, Second Edition
+
+Hi Catherine: Sounds like an interesting proposition, could you send me
+the outline and the list of open chapters in case anything else sparks my
+interest?  Also would it be possiable to see a copy of the first edition
+so I could get an idea of the writing style of the rest of the book.  I'm
+out of town until Monday so please forgive the poor spelling in this email
+(no access too a good email client when I am remote).
+
+Thanks and I look forward to hearing from you,
+RH
+
+Catherine Nolan wrote:
+> Hello RH -
+>
+> Please allow me to introduce myself as the acquisitions editor for Syngress
+> Publishing, my name is Catherine Nolan.
+>
+> Your name was forwarded to me by Ryan Russell as a potential author for the
+> second edition of his book Hack Proofing Your Network: Internet Tradecraft.
+> In particular Ryan has recommended you for the chapter on IDS Evasion.
+>
+> You would be joining the esteemed authoring team already in place consisting
+> of Kingpin, RSnake, Rain Forest Puppy, Dan Kaminsky, Ryan Permeah, Hal
+> Flynn, Marc Maiffret (?), and of course Ryan Russell.
+>
+> I have an outline available for the topics to be covered in this chapter, if
+> you are interested in reviewing it please contact me at your earliest
+> convenience. Also, this chapter is available in the first editon.
+>
+> If this topic is not of interest, but you are interested in contributing let
+> me know and I'll forward you a list of the other open chapters.
+>
+> We are currently offering $18/ per manuscript page as compensation for this
+> chapter. We would expect that the new chapter could  be delivered in one
+> month's time.
+>
+> I look forward to hearing from you regarding this matter.
+>
+> Thank you in advance for your cooperation,
+> Catherine
+> Catherine B. Nolan
+> Acquisitions Editor
+> catherine@syngress.com
+> 781-681-5151 ext 18
+>
+> Syngress Publishing
+> 800 Hingham Street
+> Rockland, MA 02370
+> http://www.syngress.com
+
+
+note: ~el8 will sabotage Hack Proofing Your Network II
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Ryan "D1ck sucking" Russell <ryan@securityfocus.com>
+Subject: Re: book...
+
+CHP 16 IDS Evasion
+
+Ryan Russell wrote:
+
+> Excellent.  Just to confirm, which chapter do they have you working on?
+>
+>                               Ryan
+>
+> RH wrote:
+>
+> > Hey Ryan, how's it goin?  Thanks for the opertunity in working on your
+> > book, it seems like a pretty cool group.  I'm spending some time working
+> > out my draft for next week.  I'll probably demo against snort and
+> > RealSecure.  Hope it's all going well.
+> >
+> > Thanks,
+> > RH
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To:  <ryan@securityfocus.com>
+Subject: Hailstorm
+
+Ryan, I Know you said to use Hailstorm as an example of some packey level
+evasions, but I believe clicktosecure.com is down and I cannot find much
+literature about this product.  Do you have anything that I could look at?
+I am going to go on about dugsongs fragrouter and horizons Defeating
+Sniffers and Intrusion Detection Systems phrack paper that included
+congestant.c
+
+
+note: rh, the click and point specialist
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: "Jennifer 8. Lee" <jenny@nytimes.com>
+Subject: RE: APCO?
+
+Just some work with the honeynet, developing some code and tools for use
+in a few applications.  Real life work is pretty demanding right now,
+allthough I am trying to find openings in the US.  I want to be closer to
+some family.
+
+TTYL,
+RH
+
+Jennifer 8. Lee wrote:
+>
+> okay. how are you doing? are you working on something interesting?
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: J4ne Nolan <catherine@syngress.com>
+Subject: RE: Chapter
+
+Here you go...
+Hope there arent too many bugs, visio died on me so I had to dump one of
+the diaagrams.
+
+RH
+
+Catherine Nolan wrote:
+
+> Sure....I'm usually okay with extending dates a day or so.  I'll look
+> forward to reviewing your chapter first thing tomorrow morning.
+>
+> C
+>
+> Catherine B. Nolan
+> Acquisitions Editor
+> catherine@syngress.com
+> 781-681-5151 ext 18
+>
+> Syngress Publishing
+> 800 Hingham Street
+> Rockland, MA 02370
+> http://www.syngress.com
+>
+> -----Original Message-----
+> From: RH [mailto:rh@redhat.com]
+> To: Catherine Nolan
+> Subject: Re: Chapter Delivery Reminder
+>
+> Catherine, can you actually give me until the end of day Monday (eg.
+> 8pm)  I am going to be travelling all day and will not have net acess
+> until then.
+>
+> Thanks,
+> RH
+>
+> Catherine Nolan wrote:
+>
+> > Hi Guys -
+> > I'd like to remind you all that your completed first drafts of your
+> chapters
+> > will be due this coming Monday. I would prefer that they be submitted to
+> me
+> > during working hours. I can't tell you how many people think Monday means
+> > Tuesday....because they submit their work at 11:20 PM.
+> >
+> > I hope that this will  help you plan your weekends accordingly.
+> >
+> > Thank you all for your hard work thus far -  keep it up!
+> >
+> > Best,
+> > Catherine
+> > Catherine B. Nolan
+> > Acquisitions Editor
+> > catherine@syngress.com
+> > 781-681-5151 ext 18
+> >
+> > Syngress Publishing
+> > 800 Hingham Street
+> > Rockland, MA 02370
+> > http://www.syngress.com
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: J4ne Spitzner <lance@honeynet.org>
+Subject: Re: dtspc attack
+
+Hey Lance, This version of the dtspcd exploit has been out for quite some
+time.  at least 3 months, it's the same version Ihave.  Do you know what
+signature it set off from snort?
+
+The guy that wrote it put in some passwords for binaires that would be
+distributed, so unfortuntatly some kiddies probably got it and are running
+it all over the 'net :(
+
+Anything inperticular you want to know about it?
+Take care,
+RH
+
+Here are some snippets from the comments from my copy..
+(I origianally found this vuln in '99;)
+storm:/tmp/dtspcd/src# cat defs.h
+...
+/* inetd shell using above service w/passive success checking and cleanup
+*/
+#define DEFAULT_CMD     \
+   "echo \"" /* service here */ " stream tcp nowait root /bin/sh sh
+-i\">/tmp/x;" \
+     "/usr/sbin/inetd -s /tmp/x;" \
+     "sleep 10;" \
+     "/bin/rm -f /tmp/x ";
+
+#define SUCCESS_CMD     \
+   "uname -a;ls -l /core /var/dt/tmp/DTSPCD.log;" \
+
+"PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/ccs/bin:/usr/gnu/bin;"
+\
+     "export PATH;echo \"BD PID(s): \"`ps -fed|grep ' -s /tmp/x'|grep -v
+grep|awk '{print $2}'`\n"
+
+....
+storm:/tmp/dtspcd/src# cat dtspcd_ex.c
+ * What does it do?
+ *
+ * 1. remotely and silently gets the equivalent of:
+ *    sh$ uname -nsrm
+ * 2. remotely and silently confirms or denies the
+ *    existence of arbitrary user names.
+ * 3. remotely and somewhat silently obtain administrator
+ *    privileges on the machine.
+ *
+ * FEATURES:
+ * i.   ability to completely generate a target via command line
+ *      parameters.
+ * ii.  automatically detects which built-in target to use.
+ * iii. command line options override target settings.
+ * iv.  cidr block scanning with CFLAGS='-DALLOW_CIDR -lm'
+ * v.   option to read targets from a file
+ * vi.  ability to brute force the target using -b
+ * vii. several different exploitation methods
+ * iix. optional password checking for binary release
+ * ix.  passive success checking using sleep shell command
+ * x.   tries multiple offsets automatically...
+ *
+ * PLANNED: (personal notes)
+ *  - maybe do other OS's (AIX, OSF1)
+ *  - eliminate nops..
+ *
+ * NOTE: this program logs nothing unless dtspcd is ran with
+ * -debug option.
+ *
+ * With use #3, worst cases are:
+ * a. /core created :(
+ * b. they had -debug on and they logged some information to
+ *    /var/dt/tmp/DTSPCD.log
+ *
+ *
+ * For fix information see:
+ * CERT Advisory CA-2001-31 Buffer Overflow in CDE Subprocess
+ * Control Service
+ *
+ *
+ * some thanks/greets to:
+ * gersh, yowie, plaguez, sircasm, RH, silitek, SolarDiz, _j_j, none,
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: no D1ck ir sin <noir@olympos.org>
+Subject: RE: .
+
+Noir, check this out...  a friend of mine coded it up... I'll get ya that
+ttdb sploit soon, I'm just travelling in the US right now.
+
+I hope you hadd a good Xmas/New Year...
+
+Later,
+RH
+
+noir sin wrote:
+> Hi RH,
+>
+> nothing much these days, I am packing up ; ). will change the damn place I
+> am living .. so not much coding or anything
+> so how you doin? btw, happy new year
+>
+> > BTW: I passed your code to a couple of ADM guys, they really liked it.
+> which one telnetd or Tru64 ttdb ?
+>
+> I didnt work on the ttdb fmt exploit lately. I will be so much happy if you
+> could enlighten me about the issue ...
+> Actually, I am working out a project that will pack almost all known
+> exploits and some unknown exploits
+> for Solaris and maybe some Tru64. ( well main reason is I only got some
+> Solaris boxens and a Tru64 access )
+>
+> I wish to keep in touch with skilled ppl like you, I believe we can exchange
+> real good info.
+>
+> take care,
+> noir
+>
+> -----Original Message-----
+> From: RH [mailto:rh@redhat.com]
+> To: noir@olympos.org
+> Subject: .
+>
+> noir,  How is it going?  You getting that ttdb code working?  I've got some
+> time next week if you still having trouble, I'll work it out.
+>
+> BTW: I passed your code to a couple of ADM guys, they really liked it.
+>
+> Take care,
+> RH
+>
+
+Attach: dtspcd-8.4.tgz
+Size: 30K
+
+
+note: a glimpse of the most elite zeroday trading network
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To:  J4ne <lance@honeynet.org>
+Subject: West Point
+
+Hey Lance, Glad to hear that nfo helped out :)
+
+I got clearence to get late february off to go speak if the spot's still
+open :)
+
+Lemme know thx!!
+RH
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspc attack
+
+Expect a ADMmutate copy eventually ;)
+
+but i was talking to my man... and like you can ask me questions to relay
+to him if you want.
+
+Cool about West Point I'll leason with Dragos for flights and stuffs...
+
+Thx again.
+RH
+
+Lance Spitzner wrote:
+
+> RH wrote:
+> > Hey Lance, This version of the dtspcd exploit has been out for quite some
+> > time.  at least 3 months, it's the same version Ihave.  Do you know what
+> > signature it set off from snort?
+>
+> Standard SPARC Shellcode, alert below.
+>
+> [**] [1:645:2] SHELLCODE sparc NOOP [**]
+> [Classification: Executable code was detected] [Priority: 1]
+> :05.950417 208.61.1.160:3594 -> 172.16.1.102:6112
+> TCP TTL:48 TOS:0x0 ID:41402 IpLen:20 DgmLen:1500 DF
+> ***AP*** Seq: 0xFF24BFA4  Ack: 0x5F79CFDD  Win: 0x3EBC  TcpLen: 32
+> TCP Options (3) => NOP NOP TS: 463986841 4158950
+> [Xref => http://www.whitehats.com/info/IDS353]
+>
+> > The guy that wrote it put in some passwords for binaires that would be
+> > distributed, so unfortuntatly some kiddies probably got it and are running
+> > it all over the 'net :(
+>
+> heh heh, I sure do.  First, do you have an exact date when this code
+> exploit was written?  I'm curious to see how long it went from actual
+> code to the the kiddie community.
+> I'm thinking of writing a KYE paper on this exploit.  The paper would
+> outline the life cycle of an exploit.  From vulnerability identification,
+> to exploit code, to common kiddie use.  We seem to have knowledge of
+> all the elements.  This would make a very beneficial paper to the
+> community if we could document this process.  What do you think about
+> such a paper?  We would need some input from the person who wrote the
+> exploit, but anonymity would not be a problem.  I know alot of .gov/.mil
+> people would be very interested in such a work.  Thoughts?
+>
+> By the way, you are famous as hell with the following agencies, Max
+> Kilger and I talked about you.
+>
+> NSA, CIA, FBI, DoD, NSF, NIST, DARPA, NPS, DoJ, Secret Service, etc ... :)
+>
+> love and kisses ...
+>
+> lance
+>
+
+
+note: rh and lance are the best narc duo i've ever seen
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: West Point, we are a go
+
+Lance, What dates should I get booked off from work?  (I'm actually just
+going to work remotely, so I can be pretty libral).
+
+What format will the talks be?
+
+Any of the SUN box's look pretty fly man :)  I love rack mount!!
+
+I'll take a peek at that paper soon, I'm remote from home until next week
+so I'm pretty slow on a few things (I am in the US right now).
+
+TTYL!
+RH
+Lance Spitzner wrote:
+
+> All right gents,
+>
+> We are a go for West Point on 26 December.  Dragos,
+> as always I'm putting in a personal request for the
+> leather pants.  I need a bio from you folks, so send
+> me one before Monday if possible.  They need the bios
+> so they can determine just how many people are going
+> to attend our presentation :)
+>
+> They asked for estimates on travel expenses, this is
+> what I gave them (just for travelling).
+>
+> Dragos/RH - $1,200 each
+> Michael/Jeff - $150 each
+>
+> Go ahead and make your travel arrangements know (especially
+> RH and Dragos).  If my travel estimates are off, I need
+> to know now.  This is what they told me about airports
+>                  --- snip snip ---
+>
+> The best airport is Stewart/Newburgh (SWF) about 20 miles north of West
+> Point. Other airports in order of ease/distance include:
+>
+> Newark, NJ (EWR)
+> LaGuardia, NY (LGA)
+> JFK, NY (JFK)
+>
+> Although I have never flown in/out of Westchester (HPN), I have heard
+> positive things about the airport if you can get a flight.
+>
+>                  --- snip snip ---
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Viz Engine <kristalyviz@hotmail.com>
+Subject: Re: your mail
+
+Sure, I'll take a look.
+RH
+
+Viz Engine wrote:
+
+> hi,
+>
+> I have a privat exploit for wu-imapd, developed it for linux and BSD.
+> Since I have no access to Solaris or HP-UX I would like to ask you to
+> port it to that systems. Would you?
+>
+> Viz
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: glined
+
+glined is a type of ban off IRC "I was glined" == "I was globally banned
+from the undernet"
+
+if you connect multiple times to IRC with the same IP (3 or more), you
+will be glined (for abuse)
+
+Take care,
+RH
+
+Lance Spitzner wrote:
+
+> Dude,
+>
+> What in the hell does 'glined' mean?  This is taken
+> from the GFORCE chats.
+>
+> :D1ck :i have the whole billing system
+> :D1ck :glined
+> :D1ck :i have the whole billing system of example
+> :D1ck :oye
+> :D1ck :heh
+> :J4n3 :lol
+> :J4n3 :glined how ?
+> :J4n3 :they didn't have the same ip
+> :J4n3 :billing system of example ??
+>
+> Thanks!
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+
+
+note: lance is a dumb fuck
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspc attack
+
+Here is what I got from jduck, (talk to him too see if he wants his name
+in the final report though).
+
+I can help with the writeup when I get back to Van, jd said it's cool if
+you contact him too.
+
+[jduck(dcc)] 1. discovered by aix in 1999
+[jduck(dcc)] aix fixed it in 1999
+[jduck(dcc)] 2. re-discovered by ISS in 2000 in solaris
+[jduck(dcc)] err 2001 perhaps?
+[d[jduck(dcc)] disclosed to sun in march 2001
+jduck(dcc)] cert/iss/etc disclosed to public november 2001
+[jduck(dcc)] exploit created late november 2001
+[jduck(dcc)] given to trusted people and testers
+[jduck(dcc)] careless left around by certain people and stolen
+<
+[jduck(dcc)] shared by unknown others
+jdrake@qoop.org
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: R1Ley Hassell <rhassell@eeye.com>
+Subject: Re: Hey man
+
+sure, just keep it to self right ;)
+
+What's new?  I'm still lookin for new work :(
+
+Later,
+RH
+
+Riley Hassell wrote:
+
+> You got a copy of the new dtspc sploit?
+>
+> -R
+>
+
+Attach: dtspcd-8.6.tgz
+Size: 35K
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspcd exploit usage
+
+OK, gimme some time on this one, I've never used the sploit.
+
+Lance Spitzner wrote:
+
+> RH,
+>
+> Dude, I notified several .gov agencies that we
+> have obtained the exploit.  They can use this
+> information to better protect against attacks.
+> I figured your buddy will not mind, as we obtained
+> it from 'the wild'.
+>
+> Anyways, could you give me a short paragraph on
+> how the exploit works and is used?  Organizations
+> need to understand how the tool works, and how
+> the kiddies can use it.  You are the
+> expert, so your insight will greatly help.
+>
+> Thanks!
+>
+> lance
+>
+
+
+note: cant figure it out smart guy?
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspcd exploit obtained (fwd)
+
+I'll ask him
+
+Lance Spitzner wrote:
+
+> Your buddy interested in chatting with the MITRE folks?
+> Alot of people are very impresses with his exploit :)
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+>
+> ---------- Forwarded message ----------
+> From: J4ne Gray <j4ne@mitre.org>
+> To: Lance Spitzner <lance@honeynet.org>
+> Subject: Re: dtspcd exploit obtained
+>
+> I went to the apparent authors website.  It hardly mentions an interest in
++security,
+> but it does look like he used to teach at the University of Central Michigan
+> http://jdrake.qoop.org/art/ has some pictures of him.  Are you familiar with
++this
+> person at all?
+>
+> I'm wondering if he didn't write this code to teach someone else and then that+person
+> started distributing it.  This guy looks like he knows his stuff and not
++stripping the
+> symbols doesn't seem to fit with that.
+>
+> Josh
+>
+> Lance Spitzner wrote:
+>
+> > J4ne Gray wrote:
+> >
+> > > It was very nice of the author to include his name and email :).  I was
++looking
+> > > at the strings output and it looks like the author took a lot of time to
++do error
+> > > checking and write one of the better usage statements i've seen.  I also
++didn't
+> > > notice a single misspelling and no script kiddish text at first glance.
++To me
+> > > that says a few things about the author.  Is this typical of what you see
++in
+> > > exploit code?  Most of the stuff i've seen in public postings is nowhere
++near
+> > > this clean.
+> >
+> > Its extremely well written, and powerful.  Definitely not our
+> > typical exploit :)
+> >
+> > lance
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: dtspcd exploit obtained (fwd)
+
+that's funny
+
+Lance Spitzner wrote:
+
+> RH wrote:
+>
+> > I'll ask him
+>
+> Dude, this is not a big deal.  Just a lot of
+> people interested in his exploit code, its more
+> impressive then most.  NSA and FBI even asked
+> me for a copy.  :)
+>
+> lance
+
+
+note: nsa cant write their own version?
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Dug Song <dugsong@monkey.org>
+Subject: Re: feh
+
+lame o
+
+KIller man, thx :)))
+
+Dug Song wrote:
+
+> this is the most retarded shite:
+>
+>       http://www.ngsec.com/whitepapers.html
+>
+> btw, i rewrote fragrouter as fragroute (runs on your local
+> machine). evades everything, including snort, and it will hide all of
+> your shellcode NOPs as well, with any of the TCP chaffing attacks or
+> TCP segment forward overlap:
+>
+>       http://www.monkey.org/~dugsong/fragroute-0.1.tar.gz
+>
+> don't redistribute, it's rough code that i want to clean up for
+> release sometime...
+>
+> -d.
+>
+> ---
+> http://www.monkey.org/~dugsong/
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Cloakware Corporation <charlene.hosein@cloakware.com>
+Subject: Re: Network Intrusion Detection
+
+Charlene, I was just wondering, Stanley told me about a demonstration
+package of your cloaking technologie where a binary with some source code
+is sent out.  Do you think I could have a copy of this?
+
+Thanks much,
+Shane
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+Subject: Re: IRC chats
+
+Well, It's probably a spoof...
+
+beer:~# telnet pentagon-hqdadss.army.pentagon.mil 23
+Trying 134.11.6.1...
+Connected to pentagon-hqdadss.army.pentagon.mil.
+Escape character is '^]'.
+VM/ESA ONLINE--HQDADSS --PRESS BREAK KEY TO BEGIN SESSION.^]
+telnet> q
+Connection closed.
+
+VM/OS box, idono, Idoubt that somebody is IRC'ng from there ;)
+
+CU
+RH
+
+Lance Spitzner wrote:
+
+> Looks like one of the guys is coming in from pentagon.army.mil.
+> Is this correct?
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+
+
+note: its the analyzer!!!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+---------- Forwarded message ----------
+From: Matt Conover <shok@dataforce.net>
+To: w00w00@blackops.org
+Subject: w00w00 with TechTV
+
+TechTV had a segment on the ethics of hacking with a featured commentary
+on w00w00. See it at
+http://www.techtv.com/news/security/story/0,24195,3369909,00.html.
+
+Matt
+
+
+note: w00w00 looks lame lately, keep it up!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Catherine Nolan <catherine@syngress.com>
+Subject: Re: your mail
+
+Catherine: Here you are, sorry for the sparsity but I am very private
+about many of the details outlined by the bio guidelines.
+
+RH is a security engineer.  He works on a variety of systems ranging from
+most any UNIX flavor to any other lesser OS.  He has spent a lot of time
+working through security issues wherever they exist; core kernels,
+networking services or binary protections.  RH is a member of w00w00 and
+is a contributing member of The Honeynet Project.  I would like to thank
+Anya for all her help and support throughout the year.
+
+Thanks,
+RH
+
+
+note: Cathy, could you please add: rh is also owned
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Catherine Nolan <catherine@syngress.com>
+cc: Kate Glennon <kate@syngress.com>
+
+Hi, Sorry I've been in Toronto all week and did not see these mails (i've
+only had remote access to mail).  I'll get the changes back to you by
+tomarrow morning.
+
+Thanks,
+RH
+
+Catherine Nolan wrote:
+
+> Hey RH -
+> I need your revisions today.....the book is going to the printer next week
+> and I need to have your chapter copyedited, laid out, and reviewed.
+> If the book doesn't go to press next week - we're not going to have books in
+> time for doubleday book club. Doubleday has ordered a significant number of
+> copies for a promotion - the books must be in their warehouse by March 4th.
+> It takes at least a week and a half to print a book - usually longer.  As a
+> royaltied author - if we miss this date - we miss 3500 units in sales. This
+> will affect your income from your contribution considerably.
+>
+> They are not happy if we don't ship our books on time.
+>
+> I cannot impress upon you the urgency of this matter - your revisions were
+> due on Monday - it is now Thursday.
+>
+> Please send these revisions to me as soon as you can - preferably before the
+> end of the day.
+>
+> Thank you,
+> Catherine
+>
+> Catherine B. Nolan
+> Acquisitions Editor
+> catherine@syngress.com
+> 781-681-5151 ext 18
+>
+> Syngress Publishing
+> 800 Hingham Street
+> Rockland, MA 02370
+> http://www.syngress.com
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: "Presby, T. MAJ          EECS" <dt7765@exmail.usma.army.mil>
+Subject: Re: USMA - Honey Net Travel Arrangements
+
+Major Presby: Thanks for your help, I was just wondering if is possiable
+that I change the return portion of this trip to layover in Kansas City
+until Sunday March 3 I'll pay any difference in cost (it may even be
+cheaper with the Saturday stay).
+
+Thanks,
+RH
+
+Presby, T. MAJ          EECS wrote:
+
+> RH,
+>
+> Your invitational travel orders are complete and we look forward to your
+> visit later this month.  An electronic ticket has been generated and will be
+> waiting for you at the Vancouver Airport.  A complete itinerary is available
+> at https://virtuallythere.com.  Use the following reservation code and your
+> last name to view your itinerary.
+>
+> Reservation Code: ESEUXD
+>
+> Your flight travels via Chicago to Newark, so you will be on the same flight
+> as Dragos Ruiu and Lance Spitzner.  Lance is authorized the rental car, so
+> you will travel in one vehicle to West Point.
+>
+> Your lodging costs will be covered during your stay.  Please contact the
+> Hotel Thayer to reserve and hold your room for 25-26 Dec with your credit
+> card (you will be reimbursed after the fact).  Hotel Thayer has a website
+> http://www.hotelthayer.com/ and they can be reached at 1-800-247-5047.
+> Ensure that you mention that you are traveling under invitational travel
+> orders and require the government rate.
+>
+> Please feel free to contact me if you have additional questions.  We look
+> forward to your visit.
+>
+> Tim
+> Major Timothy Presby
+> Asst. Prof., Dept. of Electrical Engineering and Computer Science
+> United States Military Academy, West Point, NY 10996
+> Thayer Hall 113    Phone: 845-938-5569   DSN: 688
+> Email: timothy-presby@usma.edu
+
+
+note: hey timmy, smile for the cameras!!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To:  <horizon@monkey.org>
+Subject: !.?
+
+miss you
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: joewee <joewee@monkey.org>
+Subject: Re: defcon?
+
+joewee: where are you ?  I'm in NYC now.
+
+TTYL
+RH
+
+joewee wrote:
+
+> from dt;
+>
+>
+> Sounds very cool. I'd be interested in reading the book when it comes
+> out.  People always talk about writing a book like that, but no one ever
+> does.
+> On another note, do you know if ADM or w00w00 has anything up their
+> sleeves
+> that might make for a good release at DEF CON? With the cDc basically
+> falling through the last two years we are looking to see if any
+> respectable
+> groups have something cool they want to showcase and release come con
+> time.
+>
+> ----
+>
+> anyone plan on going to defcon?
+
+
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: Lance Spitzner <lance@honeynet.org>
+cc: 'Dragos Ruiu' <dr@kyx.net>,  <ahuger@securityfocus.com>
+Subject: Re: ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT
+ ALERT (fwd)
+
+From what I hear gobbles is a composit, (made up from more then 1)
+person(s).  But it's all speculation anyhow.  There's tons of Solaris
+holes, and a grandious claim that "if you run it your vuln" is always BS,
+I'm sure a moderately hardend host would be fine.
+
+ttyl,
+RH
+
+Lance Spitzner wrote:
+
+> Who the f*ck is this guy.  He repeatedly has the most interesting
+> posts I've ever read.  The note at the bottom has me concerned :)
+>
+> --
+> Lance Spitzner
+> http://project.honeynet.org
+>
+> ---------- Forwarded message ----------
+> From: gobbles@hushmail.com
+> To: bugtraq@securityfocus.com, vulnwatch@vulnwatch.org,
+>      vuln-dev@securityfocus.com, bugs@securitytracker.com
+> Subject: ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT
+>
+> Dear World,
+> Below is copy paste of GOBBLES advisory for NTOP.  NTOP available from
++www.ntop.org.  This serious remote root bug in logging mechanism.  Time for
++alert and disclosure is now.
+>
+> Website with other advisories at http://www.bugtraq.org.  It look like shit
++because on free host.  GOBBLES poor researcher who not out for the big dollar,
++and nothing that can be done about this at this time.
+> ...
+> Greets:
+> Our #1 fan, Dave Aitel.  Dave, GOBBLES love you -- you get free GOBBLES Security tshirt at Defcon.
+>
+>
+> Love to all (but especially to "bob"),
+> GOBBLES Security
+> http://www.bugtraq.org
+> GOBBLES@hushmail.com
+>
+>
+> ps: GOBBLES currently in communication with Sun Microsystems about lethal remote bug in Solaris 6, 7, and 8.  Sun has asked GOBBLES to wait one month to release advisory so that service can be fixed.  GOBBLES not sure if he can wait this
+long, but will try very hard to not click "send" for while longer on hole.  If you run Solaris, likely you are vulnerable.  But you will have to wait.
+>
+> No joke, this serious remote root hole.  GOBBLES turned blind eye to argument
+from hackers about danger of releasing vulnerabilities.  GOBBLES know that only
+hackers care about non-disclosure.  Anyone else is likely to be very boring. :))))
+>
+> Hey, GOBBLES considered two ways of getting fame and recognition for he world-class security group... 1. put up a message board on bugtraq.org with gobbles group name branded all over it and let world know he have private exploits... 2. submit ground-breaking research to the securityfocus mailing lists.....
+>
+> hey, the latter has a bigger audience ;)))))))
+>
+> Hush provide the worlds most secure, easy to use online applications - which solution is right for you?
+> HushMail Secure Email http://www.hushmail.com/
+> HushDrive Secure Online Storage http://www.hushmail.com/hushdrive/
+> Hush Business - security for your Business http://www.hush.com/
+> Hush Enterprise - Secure Solutions for your Enterprise http://www.hush.com/
+>
+> Looking for a good deal on a domain name? http://www.hush.com/partners/offers.cgi?id=domainpeople
+> ------------ Output from pgp ------------
+> Pretty Good Privacy(tm) Version 6.5.8
+> (c) 1999 Network Associates Inc.
+> Uses the RSAREF(tm) Toolkit, which is copyright RSA Data Security, Inc.
+> Export of this software may be restricted by the U.S. government.
+> File is signed.  signature not checked.
+> key does not meet validity threshold.
+> WARNING:  Because this public key is not certified with a trusted
+> signature, it is not known with high confidence that this public key
+> actually belongs to: "(KeyID: 0x2199B00F)".
+
+
+note: GOBBLE GOBBLE, lance afraid of the turkey?! :PpppPPpPPPp
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+
+From: RH <rh@redhat.com>
+To: "Ragsdale, D. LTC     EECS" <DD9182@exmail.usma.army.mil>
+Subject: Re: Glad to hear you are coming to NY
+
+LTC Ragsdale: I'm glad that most of the exploits worked.  The local
+privalage escalation exploits may be a little more trickey, I think I had
+sent a couple whitch will break a non-executable stack, these tend to be a
+lot more fradgile, maybe play with the stack offset values and script a
+brute forcing script...
+
+        Sure, I'm sort of hap-hazardly getting my life together here, I'm
+booked solid through May-5, but will be available after that.  Let me know
+whenmight work for you and I'll work with that.
+
+Talk to you later,
+RH
+
+PS. My recent trip reminded me that almost 4years ago I nearly enlisted
+to the US Army, but then decided to go on for more school.
+
+Ragsdale, D. LTC     EECS wrote:
+
+> RH;
+>
+>       The Solaris exploits you sent were excellent.  They were just what I
+> needed.   I had luck with all of them except the user2root buffer overflows
+> - I could not get the offsets right.  Any suggestions?
+>
+>       Also, is there any chance we could convince you to spend a day with
+> us in the near future?  We would pay any travel expenses and, possibly,
+> provide monetary compensation for your time. We would ask you to assist us
+> to by implementing working exploits in our lab.  Tell me what you think.
+>
+> -Dan
+
+
+note: well Liutenant dan, rh already works for CSIS, sorry!
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+############### I N   C L O S I N G
+%-rh-%-spec-%-tac-%-u-%-lar-%-rh-%-spec-%-tac-%-u-%-lar-~el8-%
+
+i hope you enjoyed this little look into the liFe of a whitehat,
+which can be summed up in: m0nEy-Ca$h-lameness.  from mediocre
+crackers, to full blown security professionals, you've certainly
+made it easy on us!
+
+rh, be gracious we left out your kewl poems!
+
+catch me next month as i feature more whitehat allstars for your
+viewing pleasure.  NO MERCY FOR WHITEHATS!!@#@#
+
+-- odaymaztr
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *03* the rhel 10 source lockdown -- SiLLY G00S3                 ;
+`----------------------------------------------------------------'
+
+the year was 2023. red hat decided that the complete corresponding
+source (CCS) clause in the GPL was more of a suggestion than a
+requirement. they stopped publishing CCS for RHEL, effectively
+closing the door on exact rebuilds.
+
+the downstream distros—rocky linux, almalinux—suddenly had to
+scramble. the software freedom conservancy called the move
+"unfriendly, captious, capricious, and cringe-worthy."
+
+let's break down the timeline:
+
+2023-06: red hat announces CCS lockdown
+2023-06: SFC publishes open letter
+2023-07: rocky linux publishes workaround
+2023-08: red hat publishes "clarification" (read: legal threat)
+2024-01: IBM "rebalances" red hat china R&D
+2025-10: crimson collective breach
+2026-04: china R&D purge (419 engineers)
+2026-10: RHEL 10.2 released with "AI in the terminal"
+
+the lesson? if the source isn't free, the software isn't free.
+and if the software isn't free, what exactly are you paying for?
+
+[BEGIN_DIR] 03_source_lockdown
+[CUT_HERE] ccs_lockdown.txt
+THE RHEL 10 SOURCE LOCKDOWN: A TIMELINE
+========================================
+
+2023-06-21
+----------
+Red Hat announces that it will stop publishing complete corresponding
+source (CCS) for RHEL. The announcement is framed as a "business
+decision" to protect Red Hat's investment in RHEL.
+
+2023-06-23
+----------
+The Software Freedom Conservancy publishes an open letter calling the
+move "unfriendly, captious, capricious, and cringe-worthy."
+
+2023-06-26
+----------
+Red Hat publishes a "clarification" stating that customers who receive
+binary packages are still entitled to source under the GPL, but that
+Red Hat will only provide source to its own customers.
+
+2023-07-10
+----------
+Rocky Linux publishes a workaround using cloud images and public
+repositories. AlmaLinux follows suit.
+
+2023-08-01
+----------
+Red Hat publishes a blog post titled "Why we are doing this" which
+fails to address the core GPL question.
+
+2024-01-15
+----------
+IBM "rebalances" Red Hat's China R&D team, laying off 1,800+ engineers
+across IBM and Red Hat China operations.
+
+2025-10-02
+----------
+The Crimson Collective claims to have breached an internal GitLab
+instance used by Red Hat Consulting. ~570 GB of data is allegedly
+exfiltrated, including ~800 "Customer Engagement Reports."
+
+2026-04-01
+----------
+Red Hat's CTO sends an email to the China team: stop all engineering
+activity in China. Employment ends 31 July 2026. 419 people affected.
+
+2026-10-14
+----------
+RHEL 10.2 released with `goose`, an optional command-line AI assistant.
+The "intelligent evolution of enterprise Linux" is here.
+
+THE BOTTOM LINE
+---------------
+The old compact—community builds, company sells—is fractured. The
+source lockdown, the China layoffs, the AI pivot, and the downstream
+squeeze are not the actions of a neutral steward. They are the actions
+of a subsidiary optimizing for the parent company's strategy.
+
+Use RHEL if it solves your problem. But don't confuse the product with
+the philosophy.
+[END_CUT] ccs_lockdown.txt
+[END_DIR] 03_source_lockdown
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *04* IBM buys the beard -- ENRiCO                              ;
+`----------------------------------------------------------------'
+
+$34 billion. that's the number. in 2019, IBM wrote a check
+for $34 billion and bought Red Hat. the "open source beacon"
+became a lighthouse for enterprise subscriptions, powered by
+IBM's balance sheet.
+
+the beard was gone. the blue remained.
+
+[BEGIN_DIR] 04_ibm_buys_the_beard
+[CUT_HERE] ibm_redhat_timeline.txt
+IBM BUYS RED HAT: A TIMELINE
+=============================
+
+1993
+----
+Red Hat founded by Bob Young and Marc Ewing. The "beard" is born.
+
+1999
+----
+Red Hat IPO. The company is valued at $3 billion on the first day.
+
+2003
+----
+Red Hat Linux 9 released. The last of the "classic" Red Hat Linux
+releases.
+
+2003
+----
+Red Hat Enterprise Linux (RHEL) launched. The subscription model is
+born.
+
+2018
+----
+IBM announces intent to acquire Red Hat for $34 billion.
+
+2019-07-09
+----------
+IBM completes acquisition of Red Hat. Red Hat becomes a subsidiary of
+IBM.
+
+2020
+----
+Red Hat layoffs begin. The "synergies" are realized.
+
+2023
+----
+RHEL source lockdown. The downstream squeeze begins.
+
+2024
+----
+IBM "rebalances" China R&D. 1,800+ jobs cut.
+
+2025
+----
+Crimson Collective breach. ~570 GB of data allegedly exfiltrated.
+
+2026
+----
+China R&D purge (419 engineers). RHEL 10.2 released with AI features.
+Fedora developers openly fight over the AI pivot.
+
+THE BOTTOM LINE
+---------------
+Red Hat in 2026 is a hybrid-cloud, AI-infused, IBM-owned enterprise
+software company. It still ships Linux. It still contributes upstream.
+It still employs smart people.
+
+But the old compact—community builds, company sells—is fractured.
+The philosophy left the building a while ago. The beard is gone.
+The blue remains.
+[END_CUT] ibm_redhat_timeline.txt
+[END_DIR] 04_ibm_buys_the_beard
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *05* a brief history of redhat.com -- ODaY MaZTeR             ;
+`----------------------------------------------------------------'
+
+1993: bob young and marc ewing found red hat.
+1994: red hat linux 1.0 released.
+1999: red hat IPO. the dot-com bubble is in full swing.
+2003: red hat linux 9 released. RHEL launched.
+2019: IBM buys red hat for $34 billion.
+2023: source lockdown.
+2026: AI pivot, china purge, breach.
+
+the beard grew. the beard was trimmed. the beard is gone.
+
+[BEGIN_DIR] 05_history
+[CUT_HERE] redhat_history.txt
+A BRIEF HISTORY OF REDHAT.COM
+==============================
+
+1993
+----
+Bob Young and Marc Ewing found Red Hat. The name comes from Ewing's
+grandfather's red Cornell lacrosse hat.
+
+1994
+----
+Red Hat Linux 1.0 released. The first commercial Linux distribution
+with a box, a manual, and a support contract.
+
+1999
+----
+Red Hat IPO on NASDAQ. The stock triples on the first day. The
+dot-com bubble is in full swing.
+
+2003
+----
+Red Hat Linux 9 released. The last of the "classic" Red Hat Linux
+releases. RHEL is launched. The subscription model is born.
+
+2007
+----
+Red Hat acquires JBoss for $350 million.
+
+2014
+----
+Red Hat acquires FeedHenry for $82 million.
+
+2019
+----
+IBM acquires Red Hat for $34 billion. The largest software acquisition
+in history. Red Hat becomes a subsidiary of IBM.
+
+2023
+----
+Red Hat stops publishing complete corresponding source (CCS) for RHEL.
+The Software Freedom Conservancy calls the move "unfriendly, captious,
+capricious, and cringe-worthy."
+
+2025
+----
+The Crimson Collective claims to have breached an internal GitLab
+instance used by Red Hat Consulting. ~570 GB of data allegedly
+exfiltrated.
+
+2026
+----
+Red Hat purges its China R&D team (419 engineers). RHEL 10.2 released
+with `goose`, an optional command-line AI assistant. Fedora developers
+openly fight over the AI pivot.
+
+THE BOTTOM LINE
+---------------
+Red Hat was never a charity. It was a business. But there was a time
+when the business model aligned with the community: build a
+distribution, sell support, push code upstream. The "beard" was a
+symbol of that uneasy truce.
+
+Then IBM wrote a $34 billion check. And slowly, the beard started
+trimming itself.
+[END_CUT] redhat_history.txt
+[END_DIR] 05_history
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *06* fedora vs rhel: the tale of two hats -- FuNNY BuNNY     ;
+`----------------------------------------------------------------'
+
+fedora is the community. rhel is the product. the line between
+them used to be blurry. now it's a subscription paywall.
+
+fedora developers openly fight over whether "open source userspace
+for AI is bad." red hat's defense: "how does that help RH or IBM?
+we don't make money off you using OpenAI's API."
+
+which is true. they make money off you running models on RHEL.
+
+[BEGIN_DIR] 06_fedora_vs_rhel
+[CUT_HERE] fedora_rhel.txt
+FEDORA VS RHEL: THE TALE OF TWO HATS
+=====================================
+
+FEDORA
+------
+Fedora is the community distribution. It's where Red Hat develops
+new features, tests new packages, and pushes new ideas. It's
+sponsored by Red Hat, but governed by a community.
+
+RHEL
+----
+RHEL is the enterprise distribution. It's where Red Hat sells
+subscriptions, support contracts, and certifications. It's
+based on Fedora, but it's not Fedora.
+
+THE LINE
+--------
+The line between Fedora and RHEL used to be blurry. Fedora
+was "RHEL beta." RHEL was "Fedora with support." Now the line
+is a subscription paywall.
+
+THE AI PIVOT
+------------
+In 2026, Fedora developers openly fight over whether "open
+source userspace for AI is bad." Red Hat's defense: "how does
+that help RH or IBM? We don't make money off you using OpenAI's
+API."
+
+Which is true. They make money off you running models on RHEL.
+
+THE BOTTOM LINE
+---------------
+Fedora is the community. RHEL is the product. And the product
+is being optimized for IBM's balance sheet.
+
+The philosophy left the building a while ago. The beard is gone.
+The blue remains.
+[END_CUT] fedora_rhel.txt
+[END_DIR] 06_fedora_vs_rhel
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *07* cve-2026-nothing: a fake advisory we wrote -- ~el8      ;
+`----------------------------------------------------------------'
+
+this is a fake advisory. it is not real. it is a parody of
+the RHEL 10.2 release notes. do not run this code. do not
+believe this advisory. it is a joke.
+
+[BEGIN_DIR] 07_fake_advisory
+[CUT_HERE] CVE-2026-NOTHING.txt
+=============================================================
+CVE-2026-NOTHING: Red Hat Enterprise Linux 10.2
+"goose" AI Assistant Command Injection
+=============================================================
+
+SUMMARY
+-------
+A command injection vulnerability has been discovered in the
+`goose` command-line AI assistant included in RHEL 10.2. An
+attacker who can influence the context window of the AI assistant
+can inject arbitrary commands that will be executed with the
+privileges of the user running `goose`.
+
+AFFECTED VERSIONS
+-----------------
+Red Hat Enterprise Linux 10.2
+Red Hat Enterprise Linux 9.8 (with goose extension)
+
+CVSS v3.1 SCORE
+---------------
+9.8 (Critical)
+
+DESCRIPTION
+-----------
+The `goose` command-line AI assistant in RHEL 10.2 integrates with
+a Model Context Protocol (MCP) server. When a user asks goose to
+perform a task, goose sends the user's request to the MCP server,
+which may return a response that includes executable commands.
+Goose then executes those commands without proper sanitization.
+
+An attacker who can influence the context window of the AI
+assistant—for example, by injecting text into a file that the
+user asks goose to analyze—can cause goose to execute arbitrary
+commands.
+
+IMPACT
+------
+An attacker can execute arbitrary commands with the privileges
+of the user running `goose`. If the user is root, the attacker
+can take complete control of the system.
+
+MITIGATION
+----------
+1. Do not run `goose` as root.
+2. Do not ask `goose` to analyze untrusted files.
+3. Disable the MCP server integration by removing the `mcp` stanza
+   from `/etc/goose/config.yaml`.
+4. Apply the patch from RHSA-2026:NOTHING (when available).
+
+CREDITS
+-------
+This advisory is a parody. It is not real. Do not believe it.
+Do not run this code. It is a joke.
+
+-- ~el8 team
+
+=============================================================
+THIS IS A FAKE ADVISORY. IT IS NOT REAL.
+=============================================================
+[END_CUT] CVE-2026-NOTHING.txt
+[END_DIR] 07_fake_advisory
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *08* the 570GB supply chain lesson -- CLiFF SToLE             ;
+`----------------------------------------------------------------'
+
+october 2025. a group calling itself crimson collective claims
+to have popped an internal gitlab instance used by red hat
+consulting. the haul: ~570 gb compressed data from 28,000+
+repos, including ~800 "customer engagement reports."
+
+red hat confirmed the breach on 2 october 2025. the instance
+was isolated. the attackers were cut off. the investigation
+is ongoing.
+
+but the numbers—the big, scary numbers—come from the attackers
+themselves. red hat never confirmed the volume.
+
+what matters is what was taken: not product code, but the
+blueprints of how customers' systems are actually built.
+consulting data is reconnaissance data. that's the supply
+chain lesson nobody wants to learn until it's their diagram
+in someone else's leak channel.
+
+[BEGIN_DIR] 08_supply_chain
+[CUT_HERE] crimson_collective.txt
+THE CRIMSON COLLECTIVE BREACH: A LESSON IN SUPPLY CHAIN
+=========================================================
+
+DATE
+----
+October 2, 2025
+
+ACTOR
+-----
+Crimson Collective (self-identified)
+
+TARGET
+------
+An internal GitLab instance used by Red Hat Consulting.
+
+ALLEGED HAUL
+------------
+~570 GB compressed data
+28,000+ repositories
+~800 "Customer Engagement Reports"
+
+RED HAT'S RESPONSE
+------------------
+Red Hat confirmed the breach on 2 October 2025. The instance
+was isolated. The attackers were cut off. The investigation
+is ongoing.
+
+WHAT WAS TAKEN
+--------------
+Not product code. Not customer data in the traditional sense.
+But the blueprints of how customers' systems are actually built.
+
+Consulting data is reconnaissance data. It includes network
+diagrams, architecture documents, and implementation details.
+
+THE LESSON
+----------
+1. Your supply chain is only as secure as your weakest consulting
+   partner.
+2. Consulting data is reconnaissance data.
+3. If you don't know what's in your GitLab, someone else will.
+
+THE BOTTOM LINE
+---------------
+Red Hat never confirmed the volume. The numbers come from the
+attackers themselves. But the lesson is real: the supply chain
+is the attack surface.
+[END_CUT] crimson_collective.txt
+[END_DIR] 08_supply_chain
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *09* redhat subscription modelfucked -- CaWCaW               ;
+`----------------------------------------------------------------'
+
+the subscription model is simple: you pay us, we give you
+software and support. the "open source" part is a feature,
+not a bug.
+
+but what happens when the "open source" part is locked down?
+what happens when the source is only available to customers?
+what happens when the "community" is just a marketing term?
+
+[BEGIN_DIR] 09_subscription_model
+[CUT_HERE] subscription_model.txt
+THE RED HAT SUBSCRIPTION MODEL: A CRITIQUE
+===========================================
+
+THE PITCH
+---------
+"You pay us, we give you software and support. The software
+is open source, so you can modify it, redistribute it, and
+build on it."
+
+THE REALITY
+-----------
+"You pay us, we give you software and support. The software
+is open source, but we won't give you the complete corresponding
+source unless you're a customer. And if you redistribute it,
+we'll sue you."
+
+THE PROBLEM
+-----------
+The subscription model works when the open source part is
+actually open. It stops working when the open source part
+is locked down.
+
+THE ALTERNATIVE
+---------------
+There are other distributions. Debian. Ubuntu. Arch. OpenSUSE.
+AlmaLinux. Rocky Linux. They all have their own subscription
+models (or lack thereof).
+
+THE BOTTOM LINE
+---------------
+Use RHEL if it solves your problem. But don't confuse the
+product with the philosophy. The philosophy left the building
+a while ago. The beard is gone. The blue remains.
+[END_CUT] subscription_model.txt
+[END_DIR] 09_subscription_model
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *10* PROOF SECTION -- INSERT YOUR OWN TEXT HERE               ;
+`----------------------------------------------------------------'
+
+this is the proof section. this is where you, the reader,
+insert your own text. it could be a log. it could be a
+screenshot transcribed to text. it could be a poem. it
+could be a rant. it could be anything you want.
+
+the markers below are for you to fill in. replace the
+placeholder text between [PROOF_START] and [PROOF_END]
+with whatever you want. this is your space.
+
+[BEGIN_DIR] 10_proof
+[CUT_HERE] proof.txt
+=============================================================
+PROOF SECTION
+=============================================================
+
+[PROOF_START]
+https://ftp.redhat.com/redhat/
+https://ftp.redhat.com/suse/
+lftp username=anonymous password=-@WGET yes the -@ is apart of the password retards so use "-@WGET"
+
+USERNAME : EMAIL : PASSWORD
+ : lzascouc@redhat.com : Cooper4!
+ : jevans@redhat.com : hbadlvpg
+ : jkruger@redhat.com : redhat123!
+ : kfish@redhat.com : 16046@Hsr
+ : dmaggi@redhat.com : gradinatanord
+ : adavis@redhat.com : littlefrog1
+ : krh@redhat.com : bongo
+ : cwoodard@redhat.com : Licorice2
+ : amit.silicon2008@redhat.com : 
+ : aalzaaim@redhat.com : 
+ : jtyson@redhat.com : mepster
+ : rmaggior@redhat.com : rhrjm1998
+ : dwalsh@redhat.com : Hygiene1
+ : ted.williams@redhat.com : LU00pais
+ : mferris@redhat.com : softwaremagazine
+ : sichen@redhat.com : 123456
+ : theute@redhat.com : df7nd6st
+ : swhite@redhat.com : mpwta04
+ : kjordan@redhat.com : bubbaman1
+ : bstevens@redhat.com : redhat.com
+ : dkramer@redhat.com : Wh1stl3r!
+ : mpalej@redhat.com : partnercenter
+ : mlanglie@redhat.com : kuukaruu
+rm_bdaly1974 : bdaley@redhat.com : xxkhq
+rm_sweety85895 : sanjay24@redhat.com : lkuwm
+rm_xtc10161 : dsamuels@redhat.com : 31683
+rm_lkjsjk : hj@redhat.com : 3vzls
+playboy7536 : nawajansari@redhat.com : a9899
+mweetman-34437121 : mweetman@redhat.com : 
+ : jwood@redhat.com : montana
+ : dpryor@redhat.com : life22
+ : yakobaya@redhat.com : 74cabd
+ : jfenal@redhat.com : C0larg0l
+ : asanchez@redhat.com : pravia
+ : bdonahue@redhat.com : 1marty
+ : amontesd@redhat.com : 597333337963839
+ : support@redhat.com : servant12
+ : sichen@redhat.com : 123456
+ : fedora-trans-fa@redhat.com : photogeek03
+ : vvilcek@redhat.com : dexter1
+ : aroberso@redhat.com : OrphEuryd
+ : markb@redhat.com : 4761048bomar
+ : law@redhat.com : dave1lab
+ : rlarkinm@redhat.com : 1Woodriffe
+ : eschomo@redhat.com : lucy21484
+ : rmancy@redhat.com : A-Bomber
+ : alexl@redhat.com : clinoril1
+ : hsidhpurwala@redhat.com : 123456
+ : herrmann@redhat.com : daniela
+ : hjacob@redhat.com : connections25
+ : mbroz@redhat.com : liasiliasi321
+ : mgalgoci@redhat.com : veiqrb207
+ : mtaylor@redhat.com : pearpony634
+ : mjordan@redhat.com : QKCFVJ
+ : isvpartners@redhat.com : squall06
+ : maheshred@redhat.com : 4409057352
+ : alan@redhat.com : TravelmoleOptin
+ : sashley@redhat.com : hYhSKf1X
+ : bknight@redhat.com : tom7870
+ : djoo@redhat.com : tjdalsdl
+ : tbrady@redhat.com : B
+ : gborsuk@redhat.com : training
+ : thjones@redhat.com : beanie01
+ : cmattingly@redhat.com : password
+ : edorsch@redhat.com : woodduck
+ : clark.smith@redhat.com : zoober1
+ : ted.williams@redhat.com : LU00pais
+ : asong@redhat.com : 12345gic
+ : prazdan@redhat.com : prerna
+ : jpunzak@redhat.com : redhat
+ : kgibson@redhat.com : ricco1
+ : jhibbets@redhat.com : NCst8r0xy
+ : lmoran@redhat.com : redhat123marjorie13006
+ : rnoble@redhat.com : research
+ : pteh@redhat.com : boiboi1
+ : jrb@redhat.com : awIMFtc
+ : cdean@redhat.com : sh0guN&71
+ : fedora-trans-fa@redhat.com : wifyreci
+ : jnovello@redhat.com : sheena55
+ : tromey@redhat.com : wsb000
+ : jgormady@redhat.com : salem01
+ : jweng@redhat.com : Jwe8G&9
+ : rmaggior@redhat.com : rhrjm1998
+ : tlowe@redhat.com : olemiss23
+ : dj@redhat.com : lgvkby798
+ : gszulik@redhat.com : aaron431
+ : dpearson@redhat.com : traceyann
+ : fhirtz@redhat.com : wolfpack
+ : rgreathouse@redhat.com : ows24265
+ : fnadai@redhat.com : Husinslm07
+ : roshan@redhat.com : platinumhair440
+ : jyabuuch@redhat.com : yabuh305
+ : aavrunin@redhat.com : winston
+ : jrb@redhat.com : 3389d199458f1930
+ : stakagi@redhat.com : shinya913
+ : jarchamb@redhat.com : Winter01
+ : eprice@redhat.com : napalm
+ : jsindelka@redhat.com : joe168
+ : blane@redhat.com : racing
+ : edinctop@redhat.com : isbn1009
+ : lnicklis@redhat.com : rusty01
+ : jstuckey@redhat.com : evamarie
+ : flanagan@redhat.com : kaylakrista
+ : jmcgowan@redhat.com : woogie
+ : dng@redhat.com : babees
+ : jcardillo@redhat.com : lacrosse
+ : sjordan@redhat.com : wilkesboro
+ : yuchen@redhat.com : cyw
+ : rbaseth@redhat.com : 200994
+ : bgroh@redhat.com : drg@umart
+ : esenis@redhat.com : dizocutage
+ : rsandifo@redhat.com : ballstix
+ : rzaytoun@redhat.com : golfer59RZ
+ : pbarge@redhat.com : 1Maternity
+ : shoppe@redhat.com : changeme
+ : shall@redhat.com : flower
+ : msutphen@redhat.com : martin123
+ : fnadai@redhat.com : husinslm07
+ : akurtako@redhat.com : DmTB08kS
+ : cfleming@redhat.com : l72991c
+ : rtsuruno@redhat.com : tsuru1
+ : gvenugop@redhat.com : Guru2120$
+ : fkolacek@redhat.com : element
+ : mchappel@redhat.com : wtF0279
+ : mdatoc@redhat.com : d0thedew
+ : mnapolis@redhat.com : mikel_nap
+ : mrock@redhat.com : Bodensee321
+ : cdahlin@redhat.com : h
+ : gszulik@redhat.com : imediate
+ : wimmer@redhat.com : murie150390
+ : ieidus@redhat.com : 111333
+ : jacqueline.yeaney@redhat.com : Sui6kshp
+ : mkim@redhat.com : 123123
+ : bcallawa@redhat.com : research
+ : wgomerin@redhat.com : spooler9
+ : jasonj@redhat.com : 12jason
+ : prabu@redhat.com : redhat
+ : neflint@redhat.com : russkatz
+ : tiemann@redhat.com : kiba8link$
+ : schincho@redhat.com : sakhi108
+ : kdeverea@redhat.com : 092300
+ : dkramer@redhat.com : Wh1stl3r!
+ : moshea@redhat.com : New
+ : mexican@redhat.com : avalanch09
+ : boyejide@redhat.com : hello1
+ : veillard@redhat.com : mutt4ever
+ : enelson@redhat.com : 078925
+ : nradia@redhat.com : jas321
+ : mmatsuya@redhat.com : iza26nag.
+ : khew@redhat.com : 2120242
+ : kleavitt@redhat.com : Ciccanti
+ : irai
+han@redhat.com : y5s4rf4f
+ : sbriscoe@redhat.com : redhat1der
+ : jns@redhat.com : dksljfd0
+ : jfleury@redhat.com : parisfr75
+ : mriri@redhat.com : n5qy4m
+ : jaswang@redhat.com : 123456wolf
+ : jneedle@redhat.com : needle
+ : pmurphy@redhat.com : sacodine
+ : crhoades@redhat.com : casey1963
+ : vbenes@redhat.com : 111111#$%
+ : ajay@redhat.com : qqq111
+ : redhatconsulting@redhat.com : 261201376
+ : tderen@redhat.com : research
+ : edhbladman@redhat.com : 503CW28
+ : ayancey@redhat.com : RICHRICH
+ : fsciacca@redhat.com : Wizard
+ : sanderso@redhat.com : strider1
+ : bsun@redhat.com : 77585201
+ : ccoleman@redhat.com : old123ma
+ : rquarles@redhat.com : sherlock1
+ : cescobar@redhat.com : lluvia270
+ : don@redhat.com : matthew
+ : drobinso@redhat.com : iw2bil.bss
+ : kmorehou@redhat.com : !Aslan0001
+ : scampesi@redhat.com : evagrezza
+ : bhu@redhat.com : L1h0rvnk
+ : thuang@redhat.com : je8106088
+ : jtindal@redhat.com : stellabluez
+ : tcallawa@redhat.com : sparq658
+ : jjackson@redhat.com : 1974joel
+ : training@redhat.com : 81rk1007
+ : bgroh@redhat.com : drg
+ : gdk@redhat.com : pink4all
+ : tcardoso@redhat.com : abcf3
+ : lkundrak@redhat.com : presence
+ : timp@redhat.com : badunkadunk
+ : stixier@redhat.com : 1inest1
+ : jblundel@redhat.com : vince57
+ : khuang@redhat.com : ugullitt
+ : joakes@redhat.com : redhat
+ : mhideo@redhat.com : i18n4rh
+ : yshao@redhat.com : boston
+ : marty@redhat.com : um00passwd
+ : tverdier@redhat.com : Edith11
+ : poland@redhat.com : 196568
+ : ddasgupt@redhat.com : research
+ : krh@redhat.com : bongo
+ : kmichael@redhat.com : frank01
+ : kjohnson@redhat.com : katums
+ : glamb@redhat.com : gtllinked
+ : hartr@redhat.com : kobernick_jeanelle
+ : harrison@redhat.com : caterham7
+ : nstrug@redhat.com : r3dhat00
+ : mmahut@redhat.com : 1096503
+ : mcepl@redhat.com : kyrios
+ : gusr@redhat.com : 3plunkett
+ : cduryee@redhat.com : balls224u
+ : ayi@redhat.com : audreylim
+ : kmorehou@redhat.com : !Aslan000
+ : alan@redhat.com : frob
+ : timd@redhat.com : pirate!
+ : bbeals@redhat.com : bb6492
+ : rbaseth@redhat.com : morosery
+ : markusm@redhat.com : keyboard
+ : terry@redhat.com : bugrad
+ : tsuchiya@redhat.com : pampino
+ : cknight@redhat.com : work619
+ : praveens@redhat.com : password
+ : jmills@redhat.com : wallstreet
+ : lgray@redhat.com : calamari
+ : steved@redhat.com : LuckyDog
+ : wfoster@redhat.com : lemmeiny0
+ : ahu@redhat.com : bingbing
+ : franp@redhat.com : muffler
+ : ltroan@redhat.com : flyvarcey
+ : jculbret@redhat.com : 4sadie
+ : matt.hall@redhat.com : passcode
+ : vpatil@redhat.com : reebok
+ : kpeeples@redhat.com : Jackass1
+ : dan.ingram@redhat.com : junior71
+ : fedora-laptop-list@redhat.com : lol123
+ : gcao@redhat.com : 998074
+ : adevane@redhat.com : Chocolate
+ : djh@redhat.com : Chris1
+ : bguillemette@redhat.com : !BRG26brg6
+ : eschwarz@redhat.com : runninit
+ : aho@redhat.com : c3hokboa
+ : jjohns@redhat.com : morgan
+ : jfearn@redhat.com : redhat
+ : red@redhat.com : himhim1
+ : ohiroaki@redhat.com : crystal
+ : mtluste@redhat.com : rudi01
+ : kkolesar@redhat.com : brat6940
+ : mgargiulo@redhat.com : 0RYNA9Le
+ : mhegarty@redhat.com : 396594725574730
+ : mbarnes@redhat.com : brewster
+ : mboschier@redhat.com : publicsector8
+ : shosagra@redhat.com : research
+ : dsomers@redhat.com : xp2tws86
+ : cbaldwin@redhat.com : iluv2shop
+ : stakagi@redhat.com : bloodyhellmartyagain
+ : mrimmler@redhat.com : kii7asi2
+ : schang@redhat.com : Rocknroll1
+ : gcaster@redhat.com : 1shmily*
+ : dwu@redhat.com : 01203022
+ : dwu@redhat.com : 1203022
+ : dcm@redhat.com : filijili
+ : dchen@redhat.com : Umgah13
+ : esosa@redhat.com : abc123
+ : kattu@redhat.com : kattu
+ : sebastianc@redhat.com : infield
+ : gseguin@redhat.com : scenic44
+ : i18n-list-request@redhat.com : raclark
+ : rheldevelop@redhat.com : 248229003846096
+ : dkane@redhat.com : LinkedinDAK*
+ : juwilson@redhat.com : r31d32SW
+ : fnadai@redhat.com : XM9X7WNJ
+ : fnadai@redhat.com : eycott29
+ : kbakis@redhat.com : elvis1
+ : luis.bustamante@redhat.com : Jmiguel95
+ : kaufmann@redhat.com : NickMerchant
+ : jcallawa@redhat.com : h4ckm3
+ : jclawson@redhat.com : research
+ : rosalindh@redhat.com : k48b7wnp
+ : skanda@redhat.com : alfa156
+ : rdoty@redhat.com : LIKall1129
+ : easterneurope@redhat.com : 196
+ : mvincent@redhat.com : 060201
+ : ryang@redhat.com : Hellsing_99
+ : jmitchel@redhat.com : zuyucib6
+ : jdelvalm@redhat.com : bolaextra
+ : abeasley@redhat.com : rotella
+ : jgoetze@redhat.com : jorkost118
+ : asoonliw@redhat.com : mingguang
+ : shliu@redhat.com : aaaa1234
+ : jmccarty@redhat.com : imc74jlm
+ : fedora-trans-es@redhat.com : blacker27
+ : basbill@redhat.com : b223347a
+ : bburke@redhat.com : 1adam12
+ : peterm@redhat.com : changeme
+ : alan@redhat.com : frobscan
+ : jbryce@redhat.com : redhat1
+ : chuetter@redhat.com : chris123
+ : cdonnee@redhat.com : stardanser
+ : mabrooks@redhat.com : Nicole4435
+ : neflint@redhat.com : oskar096
+ : mturina@redhat.com : michelon
+ : mkclark@redhat.com : Sunny01*
+ : mhilburg@redhat.com : cfccfc99
+ : mchaddha@redhat.com : jasleen1
+ : mmahut@redhat.com : redbrnohat
+ : mbacklun@redhat.com : 363448347084476
+ : jparker@redhat.com : foobar
+ : jfenal@redhat.com : C0larg0
+ : rvokal@redhat.com : ratsoft
+ : rsushil@redhat.com : Vaishali2301
+ : santa@redhat.com : whatever1
+ : rranade@redhat.com : swati01
+ : ccheng@redhat.com : 2uliggoi
+ : wsendall@redhat.com : griffey24
+ : www.mwiseman@redhat.com : finlay08
+ : sharring@redhat.com : stingray123
+ : edutton@redhat.com : 12251980a
+ : jfung@redhat.com : just4me
+ : vborel@redhat.com : veronibo
+ : foomax@redhat.com : foomax
+ : jmills@redhat.com : redhat$13
+ : jasonj@redhat.com : 12jason()
+ : peter.hutterer@redhat.com : xrgumf9T
+ : bjohnson@redhat.com : tyngsb0r0
+ : bmarson@redhat.com : Marzynski
+ : bguillemette@redhat.com : !Brg26brg6
+ : bkey@redhat.com : hudson06
+ : rsushil@redhat.com : Vaishali2301$
+ : jclawson@redhat.com : bio13096
+ : jrb@redhat.com : awimftc
+ : jns@redhat.com : Dksljfd0
+ : jopp@redhat.com : jazzy26cat
+ : enelson@redhat.com : babypool11845
+ : freznice@redhat.com : Gandalf!l
+ : tbrady@redhat.com : B@lld@g1
+ : droselli@redhat.com : dommy138
+ : ralberta@redhat.com : Roby1963
+ : dlesage@redhat.com : altius3
+ : rhn-users@redhat.com : wh1tesh4rk
+ : nordics@redhat.com : 196567
+ : pmiller@redhat.com : rockstar14
+ : ghaff@redhat.com : research
+ : akhan@redhat.com : redhat123
+ : cpuccio@redhat.com : research
+ : jeisner@redhat.com : research
+ : bforte@redhat.com : BrianForte
+ : lmoran@redhat.com : redhat123
+ : bsettle@redhat.com : sigi4591
+ : jpeuchau@redhat.com : pompignac
+ : vvaz@redhat.com : SECRET93
+ : amcmurray@redhat.com : lakeside
+ : regan@redhat.com : go2duke
+ : kstott@redhat.com : myrtl3
+ : droy@redhat.com : anushka
+ : tgrice@redhat.com : little1
+ : jsavod@redhat.com : spidey
+ : tsanders@redhat.com : stets0n
+ : echua@redhat.com : sherwood
+ : slc@redhat.com : vegas313
+ : dwa@redhat.com : Firefly1
+ : vupparap@redhat.com : kri$hn@
+ : jha@redhat.com : gob00ty
+ : twalle@redhat.com : saga1106
+ : dkruger@redhat.com : o3448i
+ : slalka@redhat.com : network02
+ : cwilkins@redhat.com : Carolina1!
+ : rashmisoni.936@redhat.com : rashmisoni
+ : mgalgoci@redhat.com : LinkedP00p!
+ : hselnes@redhat.com : chess3500
+ : dsainty@redhat.com : ytniasd
+ : isv-europe@redhat.com : jaime2
+ : messer@redhat.com : donkey128
+ : mgeorge@redhat.com : LXldap12
+ : mweissen@redhat.com : leolea67
+ : mveronel@redhat.com : soldado
+ : hurricane-list-request@redhat.com : kristian
+ : hoke.colby@redhat.com : 062382
+ : hsha@redhat.com : qkek0419
+ : npradhan@redhat.com : SWAPNIL
+ : hkojima@redhat.com : Chrono23
+ : slumsden@redhat.com : Radiohead
+ : switzerland@redhat.com : 196566
+ : cmerrill@redhat.com : parler
+ : enelson@redhat.com : babypool845
+ : apinchev@redhat.com : eabrny675
+ : jmyers@redhat.com : coneave1
+ : bdaley@redhat.com : bdaley
+ : rmarine@redhat.com : LeoCoop0221
+ : ekelly@redhat.com : xsleazerockbarbiex
+ : kwong@redhat.com : slamdunk23
+ : wshen@redhat.com : 111111
+ : rosalindh@redhat.com : mongoose
+ : elainen@redhat.com : elan1234
+ : smusson@redhat.com : research
+ : matt.stuempfle@redhat.com : bassoon1
+ : jeperkin@redhat.com : research
+ : jgrant@redhat.com : moochone1
+ : smungall@redhat.com : abb2345y
+ : ytan@redhat.com : 123456
+ : shrilankb@redhat.com : death*
+ : gjha@redhat.com : gautam
+ : cbrideau@redhat.com : shannon
+ : gajownik@redhat.com : tigger
+ : rodrigo.padula@redhat.com : iwantyou
+ : rodrigo.padula@redhat.com : Ilovepink2332
+ : rsingh@redhat.com : kaveri22
+ : rrivera@redhat.com : Fedora03
+ : utamuli@redhat.com : lyyzbflf
+ : tdonahue@redhat.com : bigdog
+ : ykim@redhat.com : qwer1234
+ : inatoewa@redhat.com : redhat
+ : ext3-users@redhat.com : monawohe
+ : erobinso@redhat.com : tenten47
+ : cmartine@redhat.com : gandalf7
+ : srastogi@redhat.com : papamummy12
+ : tiemann@redhat.com : kiba8link
+ : priggs@redhat.com : cyclone1
+ : lpal@redhat.com : friend
+ : jfarmer@redhat.com : m0ng00s3
+ : crunge@redhat.com : cjrak1088
+ : dcoronad@redhat.com : bruin1s
+ : bdaley@redhat.com : people1
+ : reiselt@redhat.com : Bambi6688
+ : phnath@redhat.com : mullet
+ : jamwilli@redhat.com : cracker
+ : vnegi@redhat.com : helpme01
+ : bhinson@redhat.com : redhat
+ : jchaney@redhat.com : rafferty8
+ : sakumar@redhat.com : sato
+ : dkane@redhat.com : LinkedinDAK
+ : vvilcek@redhat.com : 29288089
+ : blerta@redhat.com : emybora
+ : kcatallo@redhat.com : whatthe
+ : jslusher@redhat.com : fhshrfbk
+ : djoo@redhat.com : tjd
+ : easterneurope@redhat.com : 196569
+ : osulliva@redhat.com : Popcorn07
+ : james.brown@redhat.com : h31d1b
+ : federico@redhat.com : 1081797124
+ : mboschier@redhat.com : vtfightsongand2001
+ : ekelly@redhat.com : yumyum
+ : takenaka@redhat.com : toshio
+ : lisac@redhat.com : mooney
+ : redhat@redhat.com : redhat
+ : alavoy@redhat.com : rhr&d11
+ : jeversol@redhat.com : cypnf2mmt
+ : dboone@redhat.com : Zakayaf2!
+ : dmcguan@redhat.com : Ilike2play
+ : nickc@redhat.com : 76MADMEN
+ : moshea@redhat.com : New%Y0rk
+ : mgahagan@redhat.com : c4d4vr3
+ : cdong@redhat.com : exabyte
+ : sdenham@redhat.com : juliajones
+ : mkclark@redhat.com : Sunny01
+ : austria@redhat.com : 196565
+ : msantos@redhat.com : AlachuaC
+ : mmahut@redhat.com : mujag
+ : openshift@redhat.com : xmj8xpug
+ : yayang@redhat.com : 19860613
+ : wolfgang@redhat.com : shitbag
+ : ayancey@redhat.com : nicole
+ : russia@redhat.com : 196570
+ : mafernan@redhat.com : Cami1la.
+
+ OWNED By ~el8.
+
+[PROOF_END]
+
+=============================================================
+END OF PROOF SECTION
+=============================================================
+[END_CUT] proof.txt
+[END_DIR] 10_proof
+
+
+
+
+.~v~----------------------------------------------------------~v~.
+; *11* clos1ngz werdz -- ~el8 TEaM                              ;
+`----------------------------------------------------------------'
+
+GET the WORD out. GET the WORD out. GET the WORD out. GET the WORD out.
+
+th1s issue r0kz. y0u may help ~el8 by spre4d1ng the w0rd. unfortunatly
+n01 w4ntz t0 h0zt this ezine, bekoz they r 2 fukn sk4r3d. tell every1
+u kn0w ab0ut ~el8, pass it 0n via dcc, email it t0 y0ur grandparentz
+on a0l.com, print it 0ut, put s0me we4d on it, roll it up, and sm0ke it.
+
+ ~el8 is dope. kool-rad         k-fat             badassezinenodoubt
+  ~el8 is dope. kool-fresh      k-hip             shit          shit
+   ~el8 is dope. k-hip          k-kul             elite        elite
+    ~el8 is dope. bad ass bro   badaz             eliteasshitaselite
+   ~el8 is dope. k-hip          fuck!.            elite        elite
+  ~el8 is dope. kool-fresh      ~el8!roxroxrox    shit          shit
+ ~el8 is dope. kool-rad         koolhipawesome    badassezinenodoubt
+
+GET the WORD out. GET the WORD out. GET the WORD out. GET the WORD out.
+
+to verify ~el8 y0u m4y uze thiz public key
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGPfreeware 31.8-720i
+
+~el80d4yw4r3zhackpussybitchcodefuckcuntsuckHACKlamerlameexploitk
+routephrackcotnophreakPLAtheinfancyconceptr00tshipleylkmplaguez!
+antiloveADMTESOrootnobodyhackinghackershackerzhackalotF.U.C.K.AA
+FEHstrHERTgaiusACZawrJOBEcrackcocainheroinsmokedopeUNIXVMSLINUX!
+fluffibunnidatacouriersb4b09xx25x.25ROLMSDMShdlcLAPBPPPPSNSPRINT
+internetWAREZLoD/MoDlegionofdoomMastersofdumpstersphonetelcoseno
+jduckw00w00cDccultdeadcowcultdeadcatcultdeadjimmorrison2pacrapFi
+defacementsrockwwwdefacersdefacethischriscrossthehackerschoice!l
+bbsCCC2600BoWSoWWoWCoWPoWprisonersofWarEzDCCfileuploadmp3SEXpusy
+violencedeathmurderkillSPAMilovespamSPAFpurduechickenshitpoopLoL
+roflmao:D:PchatroomIRCinternetretardchatATTat&tbellmahballz~el8o
+roxsuxhackzfuxzerodayz0dayzodayzjudgejudyisourgod~el80dayw4r3z4u
+
+-----END PGP PUBLIC KEY BLOCK-----
+
+[EOW]
+[EOI]
+echo '
+                                           lllllll      888888888
+                                           l:::::l    88:::::::::88
+                                           l:::::l  88:::::::::::::88
+                                           l:::::l 8::::::88888::::::8
+                            eeeeeeeeeeee    l::::l 8:::::8     8:::::8
+                          ee::::::::::::ee  l::::l 8:::::8     8:::::8
+    _________     _____ e::::::eeeee:::::ee l::::l  8:::::88888:::::8
+   /          \  /     |e::::::e     e:::::el::::l   8:::::::::::::8
+  /  ~el8      \/      /e:::::::eeeee::::::el::::l  8:::::88888:::::8
+ /       _            / e:::::::::::::::::e l::::l 8:::::8     8:::::8
+/      /  \          /  e::::::eeeeeeeeeee  l::::l 8:::::8     8:::::8
+\_____/    \________/   e:::::::e           l::::l 8:::::8     8:::::8
+                        e::::::::e         l::::::l8::::::88888::::::8
+                         e::::::::eeeeeeee l::::::l 88:::::::::::::88
+                          ee:::::::::::::e l::::::l   88:::::::::88
+                            eeeeeeeeeeeeee llllllll     888888888
+                                                       .g4yd4nb4n.
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGPfreeware 31.8-720i
+
+~el80d4yw4r3zhackpussybitchcodefuckcuntsuckHACKlamerlameexploitk
+routephrackcotnophreakPLAtheinfancyconceptr00tshipleylkmplaguez!
+antiloveADMTESOrootnobodyhackinghackershackerzhackalotF.U.C.K.AA
+FEHstrHERTgaiusACZawrJOBEcrackcocainheroinsmokedopeUNIXVMSLINUX!
+fluffibunnidatacouriersb4b09xx25x.25ROLMSDMShdlcLAPBPPPPSNSPRINT
+internetWAREZLoD/MoDlegionofdoomMastersofdumpstersphonetelcoseno
+jduckw00w00cDccultdeadcowcultdeadcatcultdeadjimmorrison2pacrapFi
+defacementsrockwwwdefacersdefacethischriscrossthehackerschoice!l
+bbsCCC2600BoWSoWWoWCoWPoWprisonersofWarEzDCCfileuploadmp3SEXpusy
+violencedeathmurderkillSPAMilovespamSPAFpurduechickenshitpoopLoL
+roflmao:D:PchatroomIRCinternetretardchatATTat&tbellmahballz~el8o
+roxsuxhackzfuxzerodayz0dayzodayzjudgejudyisourgod~el80dayw4r3z4u
+
+-----END PGP PUBLIC KEY BLOCK-----
+'
+echo 'Extracted eldump.c'
+echo 'use $CC eldump.c -o eldump'
+echo './eldump ~el8[RH] (-v | -vv | -vvv)'
+echo
+echo '    * ~el8 team 294 local 24 *'
+echo '    *  check local listings  *'
